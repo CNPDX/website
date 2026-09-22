@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<section class="home-hero">
+  <div class="wrapper home-hero__inner">
+    <img class="home-hero__logo"
+         src="{{ page.logo | default: site.logo | relative_url }}"
+         alt="{{ site.title }} logo">
+
+    <h1 class="home-hero__title">{{ page.heading | default: site.title }}</h1>
+
+    {%- if page.subtitle or site.tagline -%}
+    <p class="home-hero__subtitle">{{ page.subtitle | default: site.tagline }}</p>
+    {%- endif -%}
+
+    {%- if content != "" -%}
+    <div class="home-hero__text prose">
+      {{ content }}
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- assign links = page.links | default: site.data.links -%}
+{%- if links and links.size > 0 -%}
+<section class="home-links">
+  <div class="wrapper">
+    {%- if page.links_heading -%}
+    <h2 class="home-links__heading">{{ page.links_heading }}</h2>
+    {%- endif -%}
+
+    <ul class="link-grid">
+      {%- for link in links -%}
+      <li class="link-card">
+        <a class="link-card__link"
+           href="{{ link.url }}"
+           {% if link.external %}target="_blank" rel="noopener"{% endif %}>
+          {%- if link.icon -%}<span class="link-card__icon" aria-hidden="true">{{ link.icon }}</span>{%- endif -%}
+          <span class="link-card__body">
+            <span class="link-card__title">{{ link.title }}</span>
+            {%- if link.description -%}<span class="link-card__desc">{{ link.description }}</span>{%- endif -%}
+          </span>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{%- endif -%}

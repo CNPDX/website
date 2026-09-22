@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="wrapper wrapper--narrow">
+    <header class="post__header">
+      <p class="post__meta">
+        <a class="post__back" href="{{ '/blog/' | relative_url }}">&larr; Blog</a>
+      </p>
+      <h1 class="post__title">{{ page.title | escape }}</h1>
+      <p class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        {%- if page.author %} &middot; {{ page.author }}{%- endif -%}
+      </p>
+    </header>
+
+    {%- if page.image -%}
+    <figure class="post__figure">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      {%- if page.image_caption -%}<figcaption>{{ page.image_caption }}</figcaption>{%- endif -%}
+    </figure>
+    {%- endif -%}
+
+    <div class="post__content prose">
+      {{ content }}
+    </div>
+
+    <footer class="post__footer">
+      <a class="post__back" href="{{ '/blog/' | relative_url }}">&larr; Back to all posts</a>
+    </footer>
+  </div>
+</article>

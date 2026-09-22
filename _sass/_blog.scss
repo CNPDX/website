@@ -1,0 +1,96 @@
+// =============================================================
+//  Blog listing & single post
+// =============================================================
+
+// --- Post list ---
+.post-list {
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.post-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.4rem;
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover { box-shadow: $shadow-hover; transform: translateY(-2px); }
+
+  &__media {
+    display: block;
+    img { width: 100%; height: 100%; object-fit: cover; min-height: 180px; }
+  }
+
+  // When there is no image, let the body span the full width
+  &--no-media { grid-template-columns: 1fr; }
+
+  &__body { padding: 1.4rem 1.5rem 1.4rem 0; }
+  &--no-media &__body { padding-left: 1.5rem; }
+
+  &__title {
+    font-size: 1.4rem;
+    margin: 0 0 0.3rem;
+    a { color: $green-dark; &:hover { color: $blue; text-decoration: none; } }
+  }
+
+  &__meta {
+    font-size: 0.9rem;
+    color: $muted-text;
+    margin: 0 0 0.7rem;
+  }
+
+  &__excerpt { margin: 0 0 0.8rem; color: $body-text; }
+
+  &__more { font-weight: 600; color: $blue-dark; }
+}
+
+.post-list__empty {
+  text-align: center;
+  color: $muted-text;
+  padding: 3rem 0;
+}
+
+@media (max-width: $bp-tablet) {
+  .post-card {
+    grid-template-columns: 1fr;
+    &__media img { min-height: 200px; }
+    &__body { padding: 1.2rem 1.4rem; }
+  }
+}
+
+// --- Single post ---
+.post { padding: 2.5rem 0 1rem; }
+
+.post__header { margin-bottom: 1.6rem; }
+.post__title { font-size: 2.4rem; margin: 0.2rem 0 0.4rem; }
+.post__meta { font-size: 0.95rem; color: $muted-text; margin: 0; }
+
+.post__back {
+  font-weight: 600;
+  color: $blue-dark;
+}
+
+.post__figure {
+  margin: 0 0 2rem;
+  img { width: 100%; border-radius: $radius; box-shadow: $shadow; }
+  figcaption {
+    font-size: 0.9rem;
+    color: $muted-text;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+}
+
+.post__footer {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid $border;
+}

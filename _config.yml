@@ -1,0 +1,54 @@
+# --- Site settings ---
+title: Cloud Native PDX
+tagline: Portland's Cloud Native & Kubernetes Community
+description: >-
+  Cloud Native PDX is a Portland, Oregon community for people building and
+  operating cloud native software — Kubernetes, containers, observability,
+  and everything in between.
+url: "https://cloudnativepdx.org"
+baseurl: ""
+lang: en
+
+# Logo images live in /images. These are used by the theme.
+logo: /images/emblem.png
+logo_flag: /images/flag_logo.png
+
+# --- Author / contact (edit as needed) ---
+email: ""
+author: Cloud Native PDX
+
+# --- Blog settings ---
+# Number of posts shown before pagination would kick in (plain listing here).
+show_excerpts: true
+
+# --- Build settings ---
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections / defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# --- Plugins (all supported by GitHub Pages) ---
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# --- Exclude from build ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - LICENSE
+  - .github
