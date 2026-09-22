@@ -1,0 +1,116 @@
+// =============================================================
+//  Header, navigation & footer
+// =============================================================
+
+// --- Header ---
+.site-header {
+  background: $header-bg;
+  color: $header-text;
+  border-bottom: 4px solid $yellow;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 68px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: $header-text;
+  font-weight: 700;
+  &:hover, &:focus { color: $white; text-decoration: none; }
+
+  &__logo { width: 42px; height: 42px; }
+  &__title { font-size: 1.2rem; letter-spacing: 0.2px; }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  &__link {
+    color: rgba($white, 0.92);
+    font-weight: 600;
+    padding: 0.45rem 0.8rem;
+    border-radius: $radius-sm;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover, &:focus { background: rgba($white, 0.14); color: $white; text-decoration: none; }
+    &.is-active { background: $yellow; color: $green-dark; }
+  }
+}
+
+// --- Mobile nav toggle (checkbox hack, no JS) ---
+.nav-toggle__label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  span {
+    display: block;
+    height: 3px;
+    width: 26px;
+    background: $white;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .nav-toggle__label { display: flex; }
+
+  .site-nav {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    &__link { padding: 0.7rem 0.5rem; }
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    max-height: 320px;
+    padding-bottom: 0.8rem;
+  }
+}
+
+// --- Footer ---
+.site-footer {
+  background: $footer-bg;
+  color: $footer-text;
+  border-top: 4px solid $yellow;
+  margin-top: 4rem;
+  padding: 2.2rem 0;
+
+  a { color: $yellow-light; &:hover { color: $white; } }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  &__brand { display: flex; align-items: center; gap: 0.9rem; }
+  &__logo { width: 52px; height: 52px; }
+  &__title { margin: 0; font-weight: 700; color: $white; }
+  &__tagline { margin: 0; font-size: 0.9rem; color: rgba($white, 0.75); }
+  &__copy { margin: 0; font-size: 0.9rem; color: rgba($white, 0.75); }
+}
+
+// --- Generic page ---
+.page { padding: 2.5rem 0; }
+.page__header { margin-bottom: 2rem; }
+.page__title { font-size: 2.4rem; }
+.page__subtitle { font-size: 1.15rem; color: $muted-text; margin: 0; }

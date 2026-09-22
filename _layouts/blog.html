@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <header class="page__header">
+    <h1 class="page__title">{{ page.title | default: 'Blog' }}</h1>
+    {%- if page.subtitle -%}<p class="page__subtitle">{{ page.subtitle }}</p>{%- endif -%}
+  </header>
+
+  {%- if content != "" -%}
+  <div class="page__content prose">{{ content }}</div>
+  {%- endif -%}
+
+  {%- if site.posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li class="post-card{% unless post.image %} post-card--no-media{% endunless %}">
+      {%- if post.image -%}
+      <a class="post-card__media" href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}">
+      </a>
+      {%- endif -%}
+      <div class="post-card__body">
+        <h2 class="post-card__title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {%- if post.author %} &middot; {{ post.author }}{%- endif -%}
+        </p>
+        {%- if site.show_excerpts -%}
+        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {%- endif -%}
+        <a class="post-card__more" href="{{ post.url | relative_url }}">Read more &rarr;</a>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- else -%}
+  <p class="post-list__empty">No posts yet — check back soon!</p>
+  {%- endif -%}
+</div>

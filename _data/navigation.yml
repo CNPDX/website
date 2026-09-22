@@ -1,0 +1,6 @@
+# Top navigation bar. Add/remove/reorder items freely.
+# `url` should be a site-relative path (starting with /).
+- title: Home
+  url: /
+- title: Blog
+  url: /blog/

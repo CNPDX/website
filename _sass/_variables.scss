@@ -1,0 +1,63 @@
+// =============================================================
+//  Theme variables — Cloud Native PDX
+//  Brand colors were extracted directly from the logo artwork
+//  in /images (emblem.png & flag_logo.png).
+// =============================================================
+
+// --- Brand palette (from the logos) ---
+$green:        #086838; // forest green — hexagon border / flag field
+$green-dark:   #054d29;
+$green-light:  #0e8a4a;
+
+$blue:         #3868e8; // Kubernetes-heptagon blue
+$blue-light:   #4888d8; // lighter flag blue
+$blue-dark:    #2450c0;
+
+$yellow:       #f8b818; // amber / gold background
+$yellow-light: #ffcf4d;
+$yellow-dark:  #d99700;
+
+// --- Roles ---
+$brand-primary:   $green;
+$brand-secondary: $blue;
+$brand-accent:    $yellow;
+
+// --- Neutrals ---
+$white:      #ffffff;
+$off-white:  #f7faf8;
+$ink:        #14211a; // near-black with a green tint for body text
+$ink-soft:   #4a564f;
+$border:     #dfe7e2;
+
+// --- Applied roles ---
+$body-bg:      $white;
+$body-text:    $ink;
+$muted-text:   $ink-soft;
+$link-color:   $blue-dark;
+$link-hover:   $green;
+
+$header-bg:    $green;
+$header-text:  $white;
+$footer-bg:    $green-dark;
+$footer-text:  rgba($white, 0.9);
+
+// --- Typography ---
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+            Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+$font-size-base: 18px;
+$line-height:    1.65;
+
+// --- Layout ---
+$content-width:  1080px;
+$narrow-width:   720px;
+$gutter:         1.5rem;
+$radius:         12px;
+$radius-sm:      8px;
+$shadow:         0 6px 20px rgba($green-dark, 0.10);
+$shadow-hover:   0 10px 28px rgba($green-dark, 0.18);
+
+// --- Breakpoints ---
+$bp-mobile:  600px;
+$bp-tablet:  820px;

@@ -1,0 +1,49 @@
+# Home page link cards.
+# Add between 6 and 7 entries for the best layout. Fields:
+#   title       (required) — the link label
+#   url         (required) — where it points (full URL or /site-relative path)
+#   description (optional) — short line of supporting text
+#   icon        (optional) — an emoji or short text badge shown beside the title
+#   external    (optional) — set to true to open in a new tab
+#
+# The text and destinations below are placeholders — edit them.
+
+- title: Upcoming Events
+  url: "#"
+  description: RSVP for our next meetup and see what's coming up.
+  icon: "📅"
+  external: true
+
+- title: Join the Meetup
+  url: "#"
+  description: Become a member of the Cloud Native PDX group.
+  icon: "🤝"
+  external: true
+
+- title: Blog
+  url: /blog/
+  description: Recaps, tutorials, and community writing.
+  icon: "✍️"
+
+- title: Slack / Chat
+  url: "#"
+  description: Say hello and connect between events.
+  icon: "💬"
+  external: true
+
+- title: Speak or Sponsor
+  url: "#"
+  description: Give a talk or support the community.
+  icon: "🎤"
+  external: true
+
+- title: Code of Conduct
+  url: "#"
+  description: How we keep this a welcoming space.
+  icon: "📜"
+
+- title: Follow Us
+  url: "#"
+  description: Updates and highlights on social media.
+  icon: "📣"
+  external: true
