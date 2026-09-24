@@ -8,42 +8,50 @@
 #
 # The text and destinations below are placeholders — edit them.
 
-- title: Upcoming Events
-  url: "#"
-  description: RSVP for our next meetup and see what's coming up.
+- title: Events & Announcements
+  url: "/blog/"
+  description: Find out what's coming up next
   icon: "📅"
-  external: true
+  external: false
 
-- title: Join the Meetup
-  url: "#"
-  description: Become a member of the Cloud Native PDX group.
+- title: Meetup.com
+  url: "https://www.meetup.com/cloud-native-pdx"
+  description: One place to RSVP for upcoming meetups
   icon: "🤝"
   external: true
 
-- title: Blog
-  url: /blog/
-  description: Recaps, tutorials, and community writing.
-  icon: "✍️"
-
-- title: Slack / Chat
-  url: "#"
-  description: Say hello and connect between events.
+- title: CNCF OCGroups
+  url: "https://ocgroups.dev/cncf/group/dgt4jmq"
+  description: Other place to RSVP for upcoming meetups
   icon: "💬"
   external: true
 
-- title: Speak or Sponsor
-  url: "#"
-  description: Give a talk or support the community.
+- title: Videos
+  url: "https://www.youtube.com/@CloudNativePDX"
+  description: Videos of previous meetups
+  icon: "💬"
+  external: true
+
+- title: Speak
+  url: "https://forms.gle/WSQXZ88udZroZVM46"
+  description: Give a talk at an upcoming meetup
   icon: "🎤"
   external: true
 
-- title: Code of Conduct
-  url: "#"
-  description: How we keep this a welcoming space.
-  icon: "📜"
+- title: Sponsor
+  url: "https://forms.gle/pJqi7gNnXafY82BL9"
+  description: Promote your org by sponsoring a meetup
+  icon: "🎤"
+  external: true
 
-- title: Follow Us
-  url: "#"
-  description: Updates and highlights on social media.
+- title: LinkedIn
+  url: "https://www.linkedin.com/company/cloud-native-pdx"
+  description: Link to us and get updates on LinkedIn
   icon: "📣"
+  external: true
+
+- title: Code of Conduct
+  url: "https://www.cncf.io/conduct/"
+  description: This meetup follows the CNCF CoC
+  icon: "📜"
   external: true
