@@ -13,6 +13,6 @@ links_heading: Get Involved
 
 Welcome to **Cloud Native PDX** — a community of developers, engineers, operators, 
 students, and enthusiasts in Portland, Oregon interested Kubernetes, containers, 
-and the modern infrastructure stack.
+and the modern infrastructure stack.  We are an official meetup of the [CNCF](https://cncf.io).
 
-We meet every two months, somewhere in the Portland/Beaverton area.  Local speakers from PNW tech companies present on a wide variety of topics, including Cloud Native infrastructure, observability, AI model serving, cloud application development, DevOps, contributing to open source, cloud OSes, Edge engineering, databases, human and career management, and more. We partner with [Portland DevOps](https://www.meetup.com/portland-devops-groundup/). We are always looking for new speakers, food and beverage sponsors, and of course attendees!  Click below for all these opportunities.
+We meet every two months, somewhere in the Portland/Beaverton area.  Local speakers from PNW tech companies present on a wide variety of topics, including Cloud Native infrastructure, observability, AI model serving, cloud application development, DevOps, contributing to open source, cloud OSes, Edge engineering, databases, human and career management, and more. We partner with [Portland DevOps](https://www.meetup.com/portland-devops-groundup/). We are always looking for new speakers, food and beverage sponsors, and of course attendees!  Links below.
