@@ -62,8 +62,38 @@ image_caption: "Caption text"      # optional
 Your post content in Markdown...
 ```
 
-Post photos go in `/images`. See `_posts/2026-09-22-welcome-to-the-blog.md`
-for a full example (delete it once you've added your own).
+#### How to add a new post
+
+1. Create a Markdown file in the `_posts/` folder.
+2. Name it `YYYY-MM-DD-a-short-title.md` (the date drives the post's URL and
+   ordering).
+3. Add the front matter block at the top — copy the one at the top of this file
+   as a starting point.
+4. Write your post below the front matter using regular Markdown.
+
+#### Adding a photo
+
+Drop an image into the `/images` folder and reference it in the front matter:
+
+```yaml
+image: /images/my-photo.jpg
+image_alt: "A short description of the photo"
+image_caption: "An optional caption shown under the photo"
+```
+
+The photo appears at the top of the post and as the thumbnail on the blog
+listing page.
+
+#### Formatting
+
+You get everything Markdown offers — **bold**, _italic_, [links](/), lists,
+and code:
+
+```bash
+kubectl get pods -A
+```
+
+> Pull-quotes and callouts look like this.🎉
 
 ### Navigation
 
